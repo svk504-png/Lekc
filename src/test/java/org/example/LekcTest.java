@@ -1,5 +1,7 @@
 package org.example;
 
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import org.example.pages.YandexPage;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +15,7 @@ public class LekcTest {
 
     @Test
     void test() {
+        Selenide.sleep(5000);
         yandexPage.openYandexPage()
                 .setTextInput("погода")
                 .click()
